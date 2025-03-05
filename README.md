@@ -27,8 +27,6 @@ The project was successfully validated with a **100% score**, meeting all evalua
 ## 📁 Files
 - `pipex.h` → Contains function prototypes and required macros  
 - `pipex.c` → Main function that handles process execution and piping  
-- `file_utils.c` → Functions to manage file opening, reading, and writing  
-- `process_utils.c` → Functions for `fork()`, `execve()`, and pipe management  
 - `Makefile` → Automates compilation (`all`, `clean`, `fclean`, `re`, `bonus`)  
 
 ## ⚙️ Implementation Details
