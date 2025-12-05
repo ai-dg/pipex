@@ -1,7 +1,5 @@
 # pipex - Recreating Shell Pipelines
 
-<img src="https://github.com/user-attachments/assets/70994cd7-6e20-451e-840a-793585806bd2" width="500">
-
 ![Score](https://img.shields.io/badge/Score-100%25-brightgreen)  
 📌 **42 School - Process & Piping Project**  
 
