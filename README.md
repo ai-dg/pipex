@@ -7,6 +7,34 @@
 The **pipex** project is about handling **UNIX pipes** (`|`) to establish communication between processes.  
 It replicates the behavior of the following shell command:  
 
+```mermaid
+flowchart TB
+    A[Start pipex] --> B[Open infile]
+    B --> C[Open outfile]
+    C --> D[Create pipe<br/>pipe read end and write end]
+
+    D --> E[Fork child 1 for cmd1]
+    D --> F[Fork child 2 for cmd2]
+
+    E --> G[Child 1 setup]
+    G --> H[dup2 infile to stdin]
+    H --> I[dup2 pipe write end to stdout]
+    I --> J[Close unused fds]
+    J --> K[execve cmd1]
+
+    F --> L[Child 2 setup]
+    L --> M[dup2 pipe read end to stdin]
+    M --> N[dup2 outfile to stdout]
+    N --> O[Close unused fds]
+    O --> P[execve cmd2]
+
+    K --> Q[Parent closes pipe ends]
+    P --> Q
+    Q --> R[Wait for children]
+    R --> S[Exit with status]
+
+```
+
 ```sh
 < file1 cmd1 | cmd2 > file2  
 ```
