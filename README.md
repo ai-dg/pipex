@@ -6,7 +6,7 @@
 ## ▌ Description
 The **pipex** project is about handling **UNIX pipes** (`|`) to establish communication between processes.  
 It replicates the behavior of the following shell command:  
-<img width="741" height="1776" alt="image" src="https://github.com/user-attachments/assets/04be7fdc-42f0-4bb6-a89e-9e3ed788fe0b" />
+<!-- <img width="741" height="1776" alt="image" src="https://github.com/user-attachments/assets/04be7fdc-42f0-4bb6-a89e-9e3ed788fe0b" /> -->
 
 ```mermaid
 flowchart TB
