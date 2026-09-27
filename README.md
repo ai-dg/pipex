@@ -8,6 +8,7 @@ The **pipex** project is about handling **UNIX pipes** (`|`) to establish commun
 It replicates the behavior of the following shell command:  
 <img src="assets/overview.png" alt="pipex — overview" width="760">
 
+<!-- Old diagram, kept for reference; the overview image above replaces it.
 ```mermaid
 flowchart TB
     A[Start pipex] --> B[Open infile]
@@ -35,6 +36,7 @@ flowchart TB
     R --> S[Exit with status]
 
 ```
+-->
 
 ```sh
 < file1 cmd1 | cmd2 > file2  
