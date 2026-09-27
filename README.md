@@ -52,9 +52,12 @@ This project was a great opportunity to explore **process creation, file redirec
 The project was successfully validated with a **100% score**, meeting all evaluation criteria. 🎉
 
 ## ▌ Files
-- `pipex.h` → Contains function prototypes and required macros  
-- `pipex.c` → Main function that handles process execution and piping  
-- `Makefile` → Automates compilation (`all`, `clean`, `fclean`, `re`, `bonus`)  
+- `pipex.h` → Function prototypes and shared structures  
+- `pipex.c` → Entry point: argument check, processes and waiting  
+- `pipes_and_check.c` → Pipe creation and file/command checks  
+- `execute_cmd.c` → Command path lookup and `execve()`  
+- `utils1.c` … `utils5.c` → String and memory helpers  
+- `Makefile` → Automates compilation (`all`, `clean`, `fclean`, `re`)  
 
 ## ▌ Implementation Details
 The `pipex` program **creates a pipeline between two commands**, just like in a shell:
@@ -73,11 +76,8 @@ The `pipex` program **creates a pipeline between two commands**, just like in a 
 | `dup2()` | Redirects file descriptors for input/output |
 | `execve()` | Executes commands like a shell |
 
-### ■ **Bonus Features**
-| Feature | Description |
-|---------|-------------|
-| ▸ **Handles multiple pipes** (`cmd1 | cmd2 | cmd3 ... | cmdn`) |
-| ▸ **Supports "here_doc" (`<< LIMITER`)** for handling standard input redirection |
+### ■ **Bonus**
+Not implemented. This version takes exactly two commands (`./pipex file1 cmd1 cmd2 file2`); the subject's bonus (multiple pipes and `here_doc`) is not supported.
 
 ## ▌ Compilation & Usage
 ### ■ **Compile the Program**
